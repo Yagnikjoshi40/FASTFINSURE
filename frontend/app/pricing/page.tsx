@@ -1,0 +1,1 @@
+export default function Pricing(){return <main className="p-8"><div className="grid md:grid-cols-3 gap-4">{['Free','Pro','Enterprise'].map((p)=><div className="card" key={p}><h2 className="text-xl">{p}</h2></div>)}</div></main>}

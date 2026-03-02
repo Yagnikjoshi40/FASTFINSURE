@@ -1,0 +1,17 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20 }
+      - name: Backend install
+        run: cd backend && npm ci
+      - name: Frontend install
+        run: cd frontend && npm ci
+      - name: Frontend build
+        run: cd frontend && npm run build
+      - name: Docker compose config
+        run: docker compose config

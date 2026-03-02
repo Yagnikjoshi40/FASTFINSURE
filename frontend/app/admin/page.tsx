@@ -1,0 +1,1 @@
+export default function Admin(){return <main className="p-8 grid gap-4 md:grid-cols-2"><div className="card">Scraping logs</div><div className="card">Failed fetches</div><div className="card">Risk override</div><div className="card">Revenue metrics</div></main>}
